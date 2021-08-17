@@ -1,0 +1,26 @@
+.review {
+    background-image: radial-gradient( circle at 50% 50%,rgba($gradient-primary-dark, .7), rgba($gradient-primary-dark, .9)), url(../img/bg-sta.png);
+    padding: 11.84rem 0 11.2rem;
+
+    &__container {
+        text-align: center;
+    }
+
+    &__img {
+        height: 19.44rem;
+        margin-bottom: 4.8rem;
+    }
+
+    &__reaction {
+        font-size: 3.3rem;
+        font-weight: 300;
+        margin-bottom: 4rem;
+        color: $color-white;
+    }
+
+    &__name {
+        font-size: 3.5rem;
+        font-weight: 600;
+        color: $color-white;
+    }
+}

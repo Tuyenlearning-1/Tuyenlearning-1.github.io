@@ -1,0 +1,125 @@
+.statistic {
+  
+    &__cards {
+        @include texture-position;
+        padding: 6rem 0 14rem;
+        background-color: $color-primary-dark;
+
+        .texture {
+            &__circle--1{
+                left: 23.53rem;
+                bottom: -8rem;
+                transform: rotate(90deg);
+            }
+            &__circle--2{
+                top: 6.4rem;
+                right: 7.2rem;
+            }
+            &__dot{
+                top: 4.8rem;
+                left: 7.84rem;
+            }
+            &__ver{
+                top: unset;
+                bottom: 4rem;
+                right: 36.16rem;
+                transform: rotate(0deg);
+            }
+            &__wave--1{
+                left: 8.96;
+                top: 18.4rem;
+               
+            }
+            &__wave--2{
+                left: unset;
+                right: 6rem;
+                bottom: 5.76rem;
+            }
+        }
+    }
+
+    .row:hover  &__circle:not(:hover){
+
+        transform: scale(.8);
+
+    }
+    &__circle {
+        border: 4px solid $color-white;
+        border-radius: 50%;
+        width: 22.24rem;
+        height: 22.24rem;
+        text-align: center;
+        color: $color-white;
+        padding: 6rem 0;
+        transition: all .3s;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    &__number {
+        display: block;
+        font-size: 5rem;
+        font-weight: 600;
+    }
+    &__name {
+        display: block;
+        font-size: 3.333rem;
+        letter-spacing: 5px;
+        margin-top: -20px;
+
+    }
+
+
+
+    &__infor {
+        @include texture-position;
+        padding: 15.2rem 0 11.6rem;
+        background-color: $color-primary;
+
+        .texture {
+            &__circle--1{
+                bottom: 4rem;
+                left: 45%;
+                transform: translateX(-50%);
+            }
+            &__circle--2{
+                top: 9.2rem;
+                right: 7.3rem;
+            }
+            &__dot{
+                transform: scale(.8);
+                right: 4rem;
+                bottom: 6.4rem;
+                top: unset;
+                left: unset;
+            }
+            &__wave--1{
+                top: 12.16rem;
+                left: 10.4rem;
+            }
+            &__ver{
+                right: unset;
+                top: 4rem;
+                left: 50%;
+                transform: rotate(90deg) scale(.8);
+            }
+        }
+    }
+    &__main {
+        display: flex;
+    }
+    &__title--primary {
+        @include title-primary
+    }
+    &__text--primary {
+        @include text-primary
+    }
+
+    &__thumb {
+        height: 37.28rem;
+        margin-left: 10rem;
+    }
+}

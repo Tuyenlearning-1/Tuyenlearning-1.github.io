@@ -1,0 +1,43 @@
+
+.texture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+
+    &__circle--1{
+        position: absolute;
+        left: -4rem;
+        bottom: 9.2rem;
+        transform: rotate(180deg);
+    }
+    &__circle--2{
+        position: absolute;
+        top: -2rem;
+        right: -2rem;
+    }
+    &__wave--1{
+        position: absolute;
+        left: 8rem;
+        top: 14rem;
+    }
+    &__wave--2{
+        position: absolute;
+        right: 0;
+        bottom: 6.4rem;
+    }
+    &__dot {
+        position: absolute;
+        top: -1.6rem;
+        left: 20.8rem;
+    }
+    &__ver {
+        position: absolute;
+        right: -8%;
+        top: 50%;
+        transform: rotate(90deg) translate(50% , 50%);
+    }
+
+}

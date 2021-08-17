@@ -1,0 +1,29 @@
+.mb-big {
+    margin-bottom: 6rem;
+}
+
+.mb-middle {
+    margin-bottom: 4rem;
+}
+
+.mb-3 {
+    margin-bottom: 2.6rem;
+}
+
+.circle-size {
+    width: 14.24rem;
+}
+
+.heading-dark {
+    color: $color-primary-dark;
+}
+
+
+.title {
+    transition: all .3s;
+    cursor: pointer;
+}
+.title:hover {
+    transform: rotate(-3deg) translateY(-3px);
+    text-shadow: 0 3px 2rem rgba($color-white, .4);
+}

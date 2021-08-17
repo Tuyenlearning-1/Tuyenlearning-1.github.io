@@ -1,0 +1,89 @@
+.footer {
+
+    padding: 20rem 0 23.2rem;
+    color: $color-white;
+    background-color: $color-primary-dark;
+
+
+    .row {
+        align-items: unset;
+    }
+
+    &__left{
+        width: 36.56rem;
+    }
+    &__right {
+        width: 48rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__title {
+        font-size: 2.5rem;
+        text-transform: capitalize;
+        margin-bottom: 3.2rem;
+    }
+    &__text {
+        hyphens: auto;
+        margin-bottom: 3.2rem;
+    }
+
+    &__item {
+        display: inline-block;
+    }
+    &__icon {
+        display: inline-block;
+        text-align: center;
+        line-height: 3.52rem;
+        width: 3.52rem;
+        height: 3.52rem;
+        margin-right: 1.2rem;
+        
+        border-radius: 50%;
+        background-color: $color-white;
+        color: #000;
+        transition: all .3s;
+        &--in:hover {
+            color: #fff;
+            background-image: linear-gradient(to top right,
+                rgb(255,220,128), 
+                rgb(252,175,69),
+                rgb(247,119,55),
+                rgb(245,96,64),
+                rgb(253,29,29),
+                rgb(225,48,108),
+                rgb(193,53,132),
+                rgb(131,58,180),
+                rgb(88,81,219),
+                rgb(64,93,230));
+        }
+        &--fb:hover {
+            color: rgb(255, 255, 255);
+            background-color: rgb(66,103,178);
+        }
+        &--tw:hover { 
+            color: rgb(255, 255, 255);
+            background-color: rgb(66,103,178);
+
+        }
+        &--ws:hover {
+            background-color: rgb(74,201,89);
+            color: #fff;
+
+        }
+
+    }
+
+    &__links li a {
+        display: inline-block;
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+        color: $color-white;
+        transition: transform .3s ease;
+        &:hover {
+            transform: scale(1.1) rotate(-3deg) translateY(-3px);
+            text-shadow: 0 7px 1rem rgba($color-white, .3);
+        }
+
+    }
+}

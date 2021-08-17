@@ -1,0 +1,138 @@
+@media screen and (max-width: 1200px) {
+    html {
+        font-size: 60% !important;
+    }
+
+    body > * {
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+
+    html {
+        font-size: 50% !important;
+    }
+    .texture {
+        display: none !important;
+    }
+
+    .header {
+        &__infor {
+            width: 90%;
+        }
+    }
+    .header__list {
+        display: none !important;
+    }
+
+
+    .row {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .col-1-of-3 {
+            width: calc(100% / 2 - 11.2rem);
+            margin-bottom: 5rem;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+    
+    }
+    
+    .statistic {
+        &__main{
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+        }
+        &__thumb {
+            margin: unset;
+        }
+  
+    }
+    
+
+    .popular{
+        &__main {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        &__thumb {
+            margin: unset;
+        }
+
+        &__card {
+            margin-bottom: 5rem;
+        }
+
+       
+    }
+    
+
+
+    .box-center {
+        text-align: center;
+        margin:  2rem 0;
+
+    }
+
+    .text-w-100 {
+        width: 100%;
+        padding: 0 10rem;
+        margin-bottom: 3rem;
+
+    }
+}
+
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 47.5% !important;
+    }
+
+    .texture {
+        display: none !important;
+    }
+
+    .row {
+        flex-direction: column;
+        justify-content: center;
+        // align-items: center;
+       
+
+        .col-1-of-3 {
+            margin-bottom: 2rem;
+        }
+    
+    }
+    // .statistic {
+    //     // &__card {
+    //     //     width: ;
+    //     // }
+    // }
+    .footer {
+        .row {
+            flex-direction: column;
+        }   
+
+        &__left {
+            width: 100%;
+            padding: 0 10rem;
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+        &__right {
+            padding: 0 5rem;
+            width: 100%;
+        }
+
+    }
+
+
+}

@@ -1,0 +1,71 @@
+.contact {
+
+   
+    .row {
+        justify-content: center;
+    }
+ 
+    &__form {
+        @include texture-position;
+        padding: 13.2rem 0 24.8rem;
+        background-color: $color-primary;
+
+
+
+        .texture {
+            &__circle--1 {
+                left: unset;
+                top: 2rem;
+                right: -4rem
+            }
+            &__circle--2 {
+                top: unset;
+                left: 50%;
+                bottom: 4.4rem;
+                transform: translateX(-50%);
+            }
+            &__wave--1{
+                left: unset;
+                top: 6.4rem;
+                right: 23.84rem;
+            }
+            &__wave--2 {
+                left: 9.76rem;
+                bottom: 12.8rem;
+            }
+            &__dot {
+            right: 8.8rem;
+            bottom: 8rem;
+            left: unset;
+            top: unset;
+            }
+            &__ver {
+                top: 6.8rem;
+                left: 7.2rem;
+                right: unset;
+                transform: unset;
+            }
+        }
+    
+    }
+
+
+   &__input {
+       width: 49.6rem;
+       border: none;
+       padding: 2rem 2.4rem;
+       border-radius: 50px;
+       font-size: 2rem;
+       z-index: 200 !important;
+
+       &:focus {
+           border: none;
+           outline: none;
+       }
+   }
+
+
+  
+  
+}
+
