@@ -16,7 +16,7 @@
     }
 
     .header {
-        // perspective: 999px;
+
         &__nav--small {
             display: block !important;
             z-index: 6;
@@ -25,8 +25,8 @@
             top: 0;
             bottom: 0;
             padding: 10rem 0 0 2rem;
-            background-image: linear-gradient(to right bottom, rgba($color-primary, .9),rgba($color-primary-dark, .5) );
-            width: 50%;
+            background-image: linear-gradient(to right bottom, rgba($color-primary, 1) 0%,rgba($color-primary-dark, 1) 50%,  rgba($color-primary-dark, .6) 50%,rgba($color-primary, .4) 100%);
+            width: 75%;
             perspective-origin: left center;
             transform-origin: center left;
             transition: all .5s;
@@ -34,6 +34,24 @@
             opacity: 0;
             visibility: hidden;
             
+        }
+        &__nav--close {
+            display: block !important;
+            margin-top: 8rem;
+
+            .bg {
+                display: inline-block;
+                background-image: linear-gradient(to right bottom, rgba($color-primary, .8) 0%,rgba($color-primary, .6) 60%,  rgba($color-primary, .6) 60%,rgba($color-primary, .4) 100%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -moz-background-clip: text;
+
+            }
+            i {
+                color: transparent;
+                font-size: 6rem;
+            }
+
         }
         &__item {
             display: block;
