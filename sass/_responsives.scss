@@ -1,4 +1,33 @@
-@media screen and (max-width: 1200px) {
+
+@media screen and (min-width: 900px) {
+    body > * {
+        width: 100% !important;
+    }
+
+    .row {
+        width: 80.4rem;
+    }
+
+    .header {
+        &__link {
+            margin-right: 4rem;
+        }
+    }
+
+    .footer {
+        .row {
+            width: 90%;
+        }
+        &__left {
+            width: 30%;
+        }
+        &__right {
+            width: 60%;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
     html {
         font-size: 60% !important;
     }
@@ -6,53 +35,83 @@
     body > * {
         width: 100% !important;
     }
-}
-
-@media screen and (max-width: 900px) {
-
-
-    html {
-        font-size: 50% !important;
-    }
 
     .header {
+        background-blend-mode: normal;
+        &__infor {
+            width: 65%;
+        }
 
-        &__nav--small {
+        &__list {
+            // Glass
             display: block !important;
             z-index: 6;
+            filter: blur(-5px);
+            backdrop-filter: blur(10px) blur(10px) saturate(100%) contrast(40%) brightness(125%);
             position: fixed;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            padding: 10rem 0 0 2rem;
-            background-image: linear-gradient(to right bottom, rgba($color-primary, 1) 0%,rgba($color-primary-dark, 1) 50%,  rgba($color-primary-dark, .6) 50%,rgba($color-primary, .4) 100%);
-            width: 75%;
-            perspective-origin: left center;
-            transform-origin: center left;
+            /* left: 0; */
+            top: 50%;
+            right: 02rem;
+            padding: 2rem 0 0 2rem;
+            /* background-image: linear-gradient(to right bottom, rgba(255, 209, 126, 0.99) 0%, rgba(33, 36, 61, 0.99) 65%, rgba(33, 36, 61, 0.99) 65%, rgba(33, 36, 61, 0.99) 100%); */
+            // width: 75%;
+            transform-origin: center right;
             transition: all .5s;
             transform: rotateY(90deg);
             opacity: 0;
             visibility: hidden;
+            text-align: end;
+            border-radius: 5rem;
             
         }
+    
+        &__link::after {
+            right: 0;
+        }
+    
         &__nav--close {
             display: block !important;
             margin-top: 8rem;
-
+            text-align: center;
+            padding: 2rem 0;
+    
             .bg {
                 display: inline-block;
-                background-image: linear-gradient(to right bottom, rgba($color-primary, .8) 0%,rgba($color-primary, .6) 60%,  rgba($color-primary, .6) 60%,rgba($color-primary, .4) 100%);
+                background-image: linear-gradient(to right bottom, rgba($color-white, .8), rgba($color-white, .9) 100%);
                 background-clip: text;
                 -webkit-background-clip: text;
                 -moz-background-clip: text;
-
+    
             }
             i {
                 color: transparent;
                 font-size: 6rem;
             }
+    
+        } 
+    }
 
+
+    p.heading__text {
+        padding: 0 20rem;
+    }
+
+    .thumb {
+        margin: 3rem 0 3rem 0 !important;
+    }
+
+    p[class*="text--primary"] {
+        padding-left: 8rem;
+        padding-right: 8rem;
+    }
+
+   
+    .header {
+
+        &__infor {
+            width: 75% !important;
         }
+
         &__item {
             display: block;
             margin: 3rem 0;
@@ -64,21 +123,13 @@
             letter-spacing: 10px;
             font-weight: 400;
         }
+
+
     }
 
 
     .texture {
         display: none !important;
-    }
-
-    .header {
-        &__infor {
-            width: 90%;
-        }
-    }
-
-    .header__list {
-        display: block !important;
     }
 
 
@@ -100,9 +151,7 @@
     
     .statistic {
         &__main{
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            @include center-content;
 
         }
         &__thumb {
@@ -113,10 +162,10 @@
     
 
     .popular{
+        
         &__main {
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+           @include center-content;
+           width: 100%;
         }
         &__thumb {
             margin: unset;
@@ -126,10 +175,14 @@
             margin-bottom: 5rem;
         }
 
+        &__infor {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+
        
     }
     
-
 
     .box-center {
         text-align: center;
@@ -137,13 +190,9 @@
 
     }
 
-    .text-w-100 {
-        width: 100%;
-        padding: 0 10rem;
-        margin-bottom: 3rem;
-
+    .btn--subscribe {
+        margin-left: -15rem;
     }
-
     .footer {
         .row {
             flex-direction: column;
@@ -177,8 +226,8 @@
         font-size: 47.5% !important;
     }
 
-    .texture {
-        display: none !important;
+    p.heading__text {
+        padding: 0 2rem;
     }
 
     .row {
@@ -193,7 +242,12 @@
     
     }
 
+    .header {
+        &__title {
+            font-size: 4rem;
+        }
 
+    }
 
     .statistic {
         &__circle {
@@ -217,15 +271,25 @@
         .form__small {
             width: 80%;
             display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
         &__input {
             width: 80%;
+            margin-bottom: 2rem;
         }
 
         .btn--subscribe {
             z-index: 333;
+            margin: unset;
         }
     }
 
 
+}
+
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 40.5% !important;
+    }
 }
