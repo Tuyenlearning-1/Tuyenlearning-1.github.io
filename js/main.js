@@ -2,17 +2,23 @@
 const tilt = $('.thumb').tilt();
 
 
+// smooth scroll
+let scroll = new SmoothScroll('header__list header__item a[href*="#"]', {
+	speed: 500
+});
 
-// let circle__cards = document.querySelector('.statistic__circle');
+// Animation items
+AOS.init();
 
-// console.log(circle__cards.getBoundingClientRect);
+// nav btn toggle 
+const toggleBtn = document.querySelector('.nav-toggle');
+const navFixed = document.querySelector('.header__nav--small');
 
 
 
-// window.addEventListener("scroll", function(){
-//     if(window.pageYOffset >= circle__cards.offsetTop) {
-//         console.log("ok");
-//         circle__cards.cssText = "background-color: red;"
-//     }
-
+toggleBtn.addEventListener('click', function(){
+	navFixed.classList.toggle('active');
+})
+// navCancel.addEventListener('click', function(){
+// 	navFixed.classList.remove('active');
 // })

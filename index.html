@@ -14,7 +14,7 @@
     />
 
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
@@ -24,26 +24,27 @@
       <nav class="header__nav">
         <img src="./img/Logo.png" alt="Logo header" class="header__logo" />
 
-        <ul class="header__list">
+        <ul class="header__list  header__nav--small">
           <li class="header__item">
-            <a href="#" class="header__link">Home</a>
+            <a href="#header" class="header__link" data-scroll data-text="Home">Home</a>
           </li>
           <li class="header__item">
-            <a href="#" class="header__link">Product</a>
+            <a href="#popular" class="header__link" data-scroll data-text="Popular">Popular</a>
           </li>
           <li class="header__item">
-            <a href="#" class="header__link">Promo</a>
+            <a href="#statistics" class="header__link" data-scroll data-text="Statistics">Statistics</a>
           </li>
           <li class="header__item">
-            <a href="#" class="header__link">About</a>
+            <a href="#reviews" class="header__link" data-scroll data-text="Reviews">Reviews</a>
           </li>
           <li class="header__item">
-            <a href="#" class="header__link">Contact</a>
+            <a href="#contact" class="header__link" data-scroll data-text="Contact">Contact</a>
           </li>
         </ul>
 
         <div class="header__icon">
-            <i class="fa fa-search" aria-hidden="true"></i>
+            <i class="fa fa-search nav-search" aria-hidden="true"></i>
+            <i class="fas fa-bars nav-toggle"></i>
         </div>
       </nav>
 
@@ -61,7 +62,7 @@
       </div>
     </header>
 
-    <section id="popular" class="popular">
+    <section class="popular" id="popular">
 
         <div class="popular__cards">
             <div class="heading mb-big">
@@ -73,21 +74,21 @@
     
             <div class="row">
                 <div class="col-1-of-3">
-                    <div class="popular__card">
+                    <div class="popular__card" data-aos="fade-up">
                         <img src="./img/popular/thumb-1.png" alt="" class="popular__img">
                         <h3 class="popular__title">Title here</h3>
                         <p class="popular__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
                     </div>
                 </div>
                     <div class="col-1-of-3">
-                        <div class="popular__card">
+                        <div class="popular__card" data-aos="fade-up">
                             <img src="./img/popular/thumb-2.png" alt="" class="popular__img">
                             <h3 class="popular__title">Title here</h3>
                             <p class="popular__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
                         </div>
                     </div>
                     <div class="col-1-of-3">
-                        <div class="popular__card">
+                        <div class="popular__card" data-aos="fade-up">
                             <img src="./img/popular/thumb-3.png" alt="" class="popular__img">
                             <h3 class="popular__title">Title here</h3>
                             <p class="popular__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
@@ -108,8 +109,8 @@
         <div class="popular__infor">
             <div class="row">
                 <div class="popular__main">
-                    <img src="./img/popular/pop-thumb-big.png" alt="thumb big" class="popular__thumb thumb"  data-tilt>
-                    <div class="popular__right box-center">
+                    <img src="./img/popular/pop-thumb-big.png" alt="thumb big" class="popular__thumb thumb"  data-tilt data-aos="zoom-in">
+                    <div class="popular__right box-center" data-aos="flip-up"    data-aos-delay="500">
                         <h2 class="popular__title--primary">Title here</h2>
                         <p class="popular__text--primary text-w-100">
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem minus nobis, distinctio eaque odit labore.
@@ -131,7 +132,7 @@
   
     </section>
 
-    <section id="statistic" class="statistic">
+    <section class="statistic" id="statistics">
         <div class="statistic__cards">
             <div class="heading mb-big">
                 <h2 class="heading__primary mb-3">Statistics</h2>
@@ -142,19 +143,19 @@
             
             <div class="row">
                 <div class="col-1-of-3">
-                    <div class="statistic__circle">
+                    <div class="statistic__circle" data-aos="zoom-out-up" >
                         <span class="statistic__number">123</span>
                         <span class="statistic__name">Store</span>
                     </div>
                 </div>
                 <div class="col-1-of-3">
-                    <div class="statistic__circle">
+                    <div class="statistic__circle" data-aos="zoom-out-up">
                         <span class="statistic__number">100</span>
                         <span class="statistic__name">Menu</span>
                     </div>
                 </div>
                 <div class="col-1-of-3">
-                    <div class="statistic__circle">
+                    <div class="statistic__circle" data-aos="zoom-out-up">
                         <span class="statistic__number">200</span>
                         <span class="statistic__name">Chef</span>
                     </div>
@@ -175,14 +176,14 @@
         <div class="statistic__infor">
             <div class="row">
                 <div class="statistic__main">
-                    <div class="statistic__right box-center">
+                    <div class="statistic__right box-center" data-aos="flip-up"    data-aos-delay="500">
                         <h2 class="statistic__title--primary">Title here</h2>
                         <p class="statistic__text--primary text-w-100">
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem minus nobis, distinctio eaque odit labore.                          
                         </p>
                         <a href="#" class="btn btn--order">order now</a>
                     </div>
-                    <img src="./img/statistics/sta-thumb-big.png" alt="thumb big" class="statistic__thumb thumb"  data-tilt>
+                    <img src="./img/statistics/sta-thumb-big.png" alt="thumb big" class="statistic__thumb thumb"  data-tilt data-tilt data-aos="zoom-in" >
                 </div>
             </div>
 
@@ -197,7 +198,7 @@
         </div>
     </section>
 
-    <section class="review">
+    <section class="review" id="reviews">
             <div class="row">
                 <div class="review__container">
                     <img src="./img/statistics/thum-1.png" alt="Avatar Revewer" class="review__img">
@@ -210,7 +211,7 @@
     </section>
 
 
-    <section class="contact">
+    <section class="contact" id="contact">
             <div class="contact__form">
                 <div class="heading mb-big heading-dark">
                     <h2 class="heading__primary mb-3">Contact for me!</h2>
@@ -220,7 +221,7 @@
                 </div>
     
                 <div class="row">
-                    <form action="">
+                    <form action="" class="form__small">
                         <input type="email" class="contact__input" placeholder="Your email" id="email">
                         <button type="submit" class="btn btn--subscribe" >subscribe</button>
                     </form>
@@ -239,7 +240,7 @@
     </section>
 
 
-    <footer class="footer">
+    <footer class="footer" id="footer">
         
         <div class="row">
             <div class="footer__left">
@@ -312,7 +313,8 @@ integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
 crossorigin="anonymous"></script>
     <script src="./js/tilt.jquery.min.js"></script>
     <script src="./js/tilt.desk.jquery.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>

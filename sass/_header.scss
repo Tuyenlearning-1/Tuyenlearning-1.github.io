@@ -22,6 +22,16 @@
 
     &__item {
         display: inline-block;
+        overflow: hidden;
+
+
+    }
+    &__item:hover &__link {
+        transform: translateY(-100%)
+    }
+    
+    &__item:hover &__link::after {
+        top: 100%;
     }
 
     &__link {
@@ -32,7 +42,24 @@
         color: $color-white;
 
         margin-right: 5.6rem;
+        position: relative;
+        perspective: 999px;
+        transform-origin: top center;
+        transition: all .3s;
+
+        &::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 100%;
+            left: 0;
+            transform-origin: center bottom;
+            transition: all .4s;
+        }
+
+        
     }
+
+
 
     &__icon {
         i {
